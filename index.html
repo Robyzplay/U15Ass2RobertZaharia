@@ -1,16 +1,41 @@
 <!DOCTYPE html>
-
 <html lang="en">
   <head>
-    <link href= "css/style.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/style.css" rel="stylesheet">
     <script src="scripts/javascript.js"></script>
-    <title>My First WebPage</title>
-
+    <title>Robert's Charity</title>
   </head>
 
   <body>
-    <h1>Home Page</h1>
-    <p>Robert's Charity</p>
-    <button onclick="sayHi()">Click Me</button>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="donate.html">Donate</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Welcome to Robert's Charity</h1>
+        <p>We are dedicated to making a difference in the lives of those in need. Join us in creating a brighter future.</p>
+        <a href="donate.html" class="cta-btn">Donate Now</a>
+      </div>
+    </section>
+
+    <section class="about-preview">
+      <h2>About Us</h2>
+      <p>Learn more about our mission and how we are changing lives.</p>
+      <a href="about.html" class="cta-btn">Read More</a>
+    </section>
+
+    <footer>
+      <p>&copy; 2025 Robert's Charity. All rights reserved.</p>
+    </footer>
   </body>
 </html>
