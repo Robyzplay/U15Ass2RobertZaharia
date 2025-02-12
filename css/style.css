@@ -1,7 +1,40 @@
 body {
-
-  background-color: black;
-  color: white;
   font-family: Arial, sans-serif;
   padding: 20px;
+  animation: rainbow 10s infinite linear;
+}
+ 
+@keyframes rainbow {
+  0% {
+    background-color: red;
+    color: blue;
+  }
+  15% {
+    background-color: orange;
+    color: green;
+  }
+  30% {
+    background-color: yellow;
+    color: purple;
+  }
+  45% {
+    background-color: green;
+    color: red;
+  }
+  60% {
+    background-color: blue;
+    color: orange;
+  }
+  75% {
+    background-color: indigo;
+    color: yellow;
+  }
+  90% {
+    background-color: violet;
+    color: pink;
+  }
+  100% {
+    background-color: red;
+    color: blue;
+  }
 }
