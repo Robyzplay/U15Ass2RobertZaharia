@@ -5,8 +5,9 @@ body {
     padding: 20px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-start; /* Aligns content towards the top */
+    align-items: center; /* Centers horizontally */
     height: 100vh; /* Full height of the viewport */
     margin: 0;
+    padding-top: 20vh; /* Pushes content down slightly */
 }
