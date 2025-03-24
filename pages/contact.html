@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us - Robert's Charity</title>
-    <link href="./styles.css" rel="stylesheet">
-    <script src="./app.js" defer></script>
+    <link href="../css/style.css" rel="stylesheet">
+    <script src="../scripts/javascript.js" defer></script>
 </head>
 
 <body>
@@ -16,20 +16,20 @@
         <div class="header-container">
             <!-- Logo & Site Name -->
             <div class="logo-title">
-                <a href="index.html">
-                <img src="./logo.png" alt="Robert's Charity Logo" class="logo">
-                <span class="site-name">Robert's Charity</span>
+                <a href="../index.html">
+                    <img src="../images/Logo.png" alt="Robert's Charity Logo" class="logo">
+                    <span class="site-name">Robert's Charity</span>
                 </a>
             </div>
 
 
             <!-- Navigation Menu -->
             <nav class="nav-menu">
-                <a href="about.html">About Us</a>
-                <a href="dates-fees.html">Dates & Fees</a>
-                <a href="events.html">Events</a>
-                <a href="contact.html">Contact Us</a>
-                <a href="educationgames.html">Education Games</a>
+                <a href="./about.html">About Us</a>
+                <a href="./dates-fees.html">Dates & Fees</a>
+                <a href="./events.html">Events</a>
+                <a href="./contact.html">Contact Us</a>
+                <a href="./educationgames.html">Education Games</a>
             </nav>
 
             <!-- Language & Join Us Button -->
@@ -60,7 +60,8 @@
                 <button type="submit">Send Message</button>
             </form>
 
-            <p class="success-message" id="success-message" style="display: none;">Thank you! Your message has been sent.</p>
+            <p class="success-message" id="success-message" style="display: none;">Thank you! Your message has been
+                sent.</p>
         </div>
     </main>
 
@@ -70,7 +71,7 @@
     </footer>
 
     <script>
-        document.getElementById("contact-form").addEventListener("submit", function(event) {
+        document.getElementById("contact-form").addEventListener("submit", function (event) {
             event.preventDefault();
             document.getElementById("success-message").style.display = "block";
             this.reset();
@@ -80,4 +81,3 @@
 </body>
 
 </html>
-
