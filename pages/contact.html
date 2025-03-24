@@ -1,1 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Robert's Charity</title>
+    <link href="./styles.css" rel="stylesheet">
+    <script src="./app.js" defer></script>
+</head>
+
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="header-container">
+            <!-- Logo & Site Name -->
+            <div class="logo-title">
+                <a href="index.html">
+                <img src="./logo.png" alt="Robert's Charity Logo" class="logo">
+                <span class="site-name">Robert's Charity</span>
+                </a>
+            </div>
+
+
+            <!-- Navigation Menu -->
+            <nav class="nav-menu">
+                <a href="about.html">About Us</a>
+                <a href="dates-fees.html">Dates & Fees</a>
+                <a href="events.html">Events</a>
+                <a href="contact.html">Contact Us</a>
+                <a href="educationgames.html">Education Games</a>
+            </nav>
+
+            <!-- Language & Join Us Button -->
+            <div class="right-actions">
+                <button class="language-btn">🌐 Language</button>
+                <a href="signup.html" class="join-btn">Join Us</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <div class="content">
+            <h2>Contact Us</h2>
+            <p>If you have any questions or need assistance, feel free to reach out to us using the form below.</p>
+
+            <!-- Contact Form -->
+            <form id="contact-form">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Your Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+
+            <p class="success-message" id="success-message" style="display: none;">Thank you! Your message has been sent.</p>
+        </div>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 Robert's Charity. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById("contact-form").addEventListener("submit", function(event) {
+            event.preventDefault();
+            document.getElementById("success-message").style.display = "block";
+            this.reset();
+        });
+    </script>
+
+</body>
+
+</html>
 
