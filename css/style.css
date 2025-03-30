@@ -576,3 +576,57 @@ img {
     }
 }
 
+
+
+
+
+
+/* Default Navigation Menu */
+.nav-menu {
+    display: flex;
+    gap: 15px;
+}
+
+/* Hide menu button by default (desktop) */
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+    /* Hide the menu by default on mobile */
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        background-color: darkblue;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .nav-menu a {
+        display: block;
+        padding: 10px;
+        color: white;
+        text-decoration: none;
+    }
+
+    /* Show menu button on mobile */
+    .menu-toggle {
+        display: block;
+    }
+
+    /* Show menu when active */
+    .nav-menu.active {
+        display: flex;
+    }
+}
