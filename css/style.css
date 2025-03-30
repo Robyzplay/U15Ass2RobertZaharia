@@ -504,3 +504,75 @@ button:hover {
     height: auto;      /* Maintains aspect ratio */
     border-radius: 10px; /* Optional: Adds rounded corners */
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Optional: Adds a slight shadow */
+
+
+
+
+/* Ensure the fixed header does not overlap content */
+@media (max-width: 900px) {
+    main {
+        padding-top: 100px; /* Reduce padding to fit smaller headers */
+    }
+}
+
+/* Make Navigation Menu Mobile-Friendly */
+@media (max-width: 768px) {
+    .nav-menu {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .nav-menu a {
+        padding: 10px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .right-actions {
+        flex-direction: column;
+    }
+}
+
+/* Content Box Stacking */
+@media (max-width: 900px) {
+    .content-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .left-content, .right-content {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* Game Box Layout Fix */
+@media (max-width: 768px) {
+    .game-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .game-box {
+        width: 90%; /* Make it fit the screen */
+    }
+}
+
+/* Ensure images are always responsive */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Improve Button & Form Field Resizing */
+@media (max-width: 600px) {
+    input, textarea {
+        width: 100%;
+    }
+
+    button {
+        width: 100%;
+    }
+}
+
