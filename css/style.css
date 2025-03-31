@@ -576,4 +576,40 @@ body.mobile-menu-open {
 
 
 
+/* Hide nav menu by default */
+.nav-menu {
+    display: none;
+    flex-direction: column;
+    gap: 15px;
+    background-color: #2c2929;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    padding: 20px;
+    width: 200px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Show the menu when it's active */
+.nav-menu.mobile-active {
+    display: flex;
+}
+
+/* Mobile Menu - Prevent scrolling when active */
+body.mobile-menu-open {
+    overflow: hidden;
+}
+
+/* General responsive design */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block; /* Ensure hamburger is visible on small screens */
+    }
+    .nav-menu {
+        display: none; /* Hide nav menu by default on mobile */
+    }
+}
+
+
 
