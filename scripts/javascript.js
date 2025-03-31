@@ -126,17 +126,16 @@ document.getElementById("contact-form").addEventListener("submit", function(even
 
 
 document.addEventListener('DOMContentLoaded', function() {
-    // Select hamburger and menu elements
-    const hamburger = document.getElementById('hamburger');
+    const hamburger = document.getElementById('hamburger-menu');
     const menu = document.getElementById('nav-menu');
+    const body = document.body;
 
-    // Toggle menu on hamburger click
-    if (hamburger) {
-        hamburger.addEventListener('click', function() {
-            menu.classList.toggle('mobile-active');
-            document.body.classList.toggle('mobile-menu-open'); // Prevent scrolling when menu is open
-        });
-    }
+    hamburger.addEventListener('click', function() {
+        // Toggle the mobile-active class to show/hide the menu
+        menu.classList.toggle('mobile-active');
+        // Toggle the body class to prevent scrolling when menu is open
+        body.classList.toggle('mobile-menu-open');
+    });
 });
 
 
