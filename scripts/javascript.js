@@ -125,5 +125,13 @@ document.getElementById("contact-form").addEventListener("submit", function(even
 
 
 
+// script.js
+
+document.getElementById('hamburger-menu').addEventListener('click', function() {
+    document.getElementById('nav-menu').classList.toggle('mobile-active');
+});
+
+
+
 
 
