@@ -509,94 +509,49 @@ button:hover {
 
 
 
-/* General Styles */
-body {
-    background-color: brown;
-    color: white;
-    font-family: Arial, sans-serif;
-    padding: 0;
-    margin: 0;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-
-/* Header */
-header {
-    background-color: darkblue;
-    padding: 10px 0;
-    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-}
-
-/* Header Container */
-.header-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: auto;
-    padding: 0 20px;
-}
-
-/* Logo & Site Name */
-.logo-title {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-}
-
-.logo-title a {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-}
-
-.logo {
-    height: 40px;
-    margin-right: 10px;
-    border-radius: 5px;
-}
-
-.site-name {
-    font-size: 20px;
-    font-weight: bold;
-    color: white;
-}
-
-/* Hamburger Menu (Mobile) */
+/* Make sure hamburger is visible on all screens */
 .hamburger {
-    display: none;
+    display: block;
+    cursor: pointer;
+    width: 30px;
+    height: 25px;
+    position: fixed; /* Position fixed to the top-right */
+    top: 20px; /* Distance from the top */
+    right: 20px; /* Distance from the right */
+    z-index: 1100; /* Make sure it’s on top of other elements */
     flex-direction: column;
     justify-content: space-between;
-    width: 25px;
-    height: 20px;
-    cursor: pointer;
 }
 
 .hamburger .line {
-    background-color: white;
     height: 4px;
     width: 100%;
-    border-radius: 2px;
+    background-color: white;
+    border-radius: 10px;
 }
 
-/* Navigation Menu */
+/* Ensure nav-menu stays hidden by default, and only shows on click */
 .nav-menu {
     display: flex;
     gap: 15px;
+    position: fixed;
+    top: 0;
+    left: -100%; /* Start off-screen */
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    background-color: rgba(0, 0, 0, 0.8); /* Dark background */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: left 0.3s ease; /* Smooth slide-in transition */
+    z-index: 1000;
 }
 
 .nav-menu a {
     text-decoration: none;
     color: white;
     font-weight: bold;
-    padding: 5px 10px;
+    padding: 15px 20px;
     transition: color 0.3s, background-color 0.3s;
     border-radius: 5px;
 }
@@ -605,85 +560,22 @@ header {
     background-color: rgba(255, 255, 255, 0.2);
 }
 
-/* Right Actions (Language & Join Us) */
-.right-actions {
-    display: flex;
-    gap: 15px;
-    align-items: center;
+/* When active, slide in the menu */
+.mobile-active {
+    left: 0; /* Slide in */
 }
 
-/* Mobile Menu Toggle */
-#nav-menu {
-    display: flex;
+/* Styles for when the menu is active (after clicking hamburger) */
+.nav-menu a {
+    font-size: 24px; /* Bigger font for visibility */
+    padding: 20px 25px;
 }
 
-#nav-menu.mobile-active {
-    display: block;
-    background-color: darkblue;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    width: 100%;
-    text-align: center;
-    padding: 20px;
-    z-index: 999;
+/* If you want the menu to be hidden again when clicking outside or on a menu item (optional) */
+body.mobile-menu-open {
+    overflow: hidden; /* Prevent scrolling when the menu is open */
 }
 
-#nav-menu a {
-    display: block;
-    padding: 10px 0;
-    font-size: 18px;
-}
-
-/* Show Hamburger Menu on Mobile */
-@media (max-width: 768px) {
-    .hamburger {
-        display: flex;
-    }
-
-    .nav-menu {
-        display: none;
-    }
-
-    #nav-menu.mobile-active {
-        display: block;
-    }
-}
-
-/* Main Content */
-main {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    flex-grow: 1;
-    padding: 120px 20px 20px;
-}
-
-.content {
-    background-color: rgb(44, 41, 41);
-    color: white;
-    padding: 40px 25px;
-    border-radius: 15px;
-    max-width: 600px;
-    text-align: left;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
-}
-
-/* Footer Section */
-footer {
-    background-color: darkblue;
-    padding: 15px;
-    width: 100%;
-    text-align: center;
-    box-sizing: border-box;
-    margin-top: auto;
-}
-
-footer p {
-    margin: 0;
-    color: white;
-    font-size: 14px;
-}
 
 
 
