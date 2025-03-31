@@ -125,11 +125,18 @@ document.getElementById("contact-form").addEventListener("submit", function(even
 
 
 
-// script.js
-
-document.getElementById('hamburger-menu').addEventListener('click', function() {
-    document.getElementById('nav-menu').classList.toggle('mobile-active');
+document.addEventListener('DOMContentLoaded', function() {
+    // Your JavaScript code here
+    const hamburger = document.getElementById('hamburger');
+    const menu = document.getElementById('nav-menu');
+    
+    if (hamburger) {
+        hamburger.addEventListener('click', function() {
+            menu.classList.toggle('mobile-active');
+        });
+    }
 });
+
 
 
 
