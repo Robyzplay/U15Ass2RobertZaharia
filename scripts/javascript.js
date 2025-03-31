@@ -147,6 +147,28 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+document.addEventListener('DOMContentLoaded', function() {
+    const hamburger = document.getElementById('hamburger-menu');
+    const menu = document.getElementById('nav-menu');
+    const body = document.body;
+
+    // Check if elements are correctly found
+    console.log(hamburger, menu);
+
+    hamburger.addEventListener('click', function() {
+        // Log click action
+        console.log("Hamburger clicked");
+
+        // Toggle the mobile-active class to show/hide the menu
+        menu.classList.toggle('mobile-active');
+        console.log(menu.classList); // Check if the class is toggled
+
+        // Toggle the body class to prevent scrolling when the menu is open
+        body.classList.toggle('mobile-menu-open');
+        console.log(body.classList); // Check body classes
+    });
+});
+
 
 
 
