@@ -126,16 +126,19 @@ document.getElementById("contact-form").addEventListener("submit", function(even
 
 
 document.addEventListener('DOMContentLoaded', function() {
-    // Your JavaScript code here
+    // Select hamburger and menu elements
     const hamburger = document.getElementById('hamburger');
     const menu = document.getElementById('nav-menu');
-    
+
+    // Toggle menu on hamburger click
     if (hamburger) {
         hamburger.addEventListener('click', function() {
             menu.classList.toggle('mobile-active');
+            document.body.classList.toggle('mobile-menu-open'); // Prevent scrolling when menu is open
         });
     }
 });
+
 
 
 
