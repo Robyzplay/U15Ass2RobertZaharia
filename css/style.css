@@ -611,5 +611,11 @@ body.mobile-menu-open {
     }
 }
 
+.hamburger {
+    font-size: 30px;
+    cursor: pointer; /* This will ensure the cursor changes to a pointer when hovering over it */
+    display: block;
+    z-index: 1100; /* Make sure it's on top of other content */
+}
 
 
